@@ -1,4 +1,5 @@
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import './AppNavbar.css';
 
 export default function AppNavbar() {
 	return (
