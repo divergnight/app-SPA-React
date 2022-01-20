@@ -6,19 +6,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AppNavbar from './components/AppNavbar/AppNavbar';
 import HomePage from './Pages/HomePage/HomePage';
+import PlayerPage from './Pages/PlayerPage/PlayerPage';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<header className="mb-5">
-			<AppNavbar />
-		</header>
-		<main>
-			<Router>
+		<Router>
+			<header className="mb-5">
+				<AppNavbar />
+			</header>
+			<main>
 				<Routes>
 					<Route path="/" element={<HomePage />}></Route>
+					<Route
+						path="/player/:name"
+						element={<PlayerPage />}
+					></Route>
 				</Routes>
-			</Router>
-		</main>
+			</main>
+		</Router>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
