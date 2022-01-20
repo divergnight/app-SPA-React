@@ -8,6 +8,7 @@ import AppNavbar from './components/AppNavbar/AppNavbar';
 import HomePage from './Pages/HomePage/HomePage';
 import PlayerPage from './Pages/PlayerPage/PlayerPage';
 import PlayerAddPage from './Pages/PlayerAddPage/PlayerAddPage';
+import PlayerEditPage from './Pages/PlayerEditPage/PlayerEditPage';
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -22,6 +23,10 @@ ReactDOM.render(
 					<Route
 						path="/player/add"
 						element={<PlayerAddPage />}
+					></Route>
+					<Route
+						path="/player/edit-:id"
+						element={<PlayerEditPage />}
 					></Route>
 				</Routes>
 			</main>
