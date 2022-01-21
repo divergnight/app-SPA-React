@@ -9,6 +9,7 @@ import HomePage from './Pages/HomePage/HomePage';
 import PlayerPage from './Pages/PlayerPage/PlayerPage';
 import PlayerAddPage from './Pages/PlayerAddPage/PlayerAddPage';
 import PlayerEditPage from './Pages/PlayerEditPage/PlayerEditPage';
+import Redirect from './Pages/Redirect/Redirect';
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -18,16 +19,19 @@ ReactDOM.render(
 			</header>
 			<main>
 				<Routes>
-					<Route path="/" element={<HomePage />}></Route>
-					<Route path="/player" element={<PlayerPage />}></Route>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/player" element={<PlayerPage />} />
+					<Route path="/player/add" element={<PlayerAddPage />} />
 					<Route
-						path="/player/add"
-						element={<PlayerAddPage />}
-					></Route>
-					<Route
-						path="/player/edit-:id"
+						path="/player/edit-:index"
 						element={<PlayerEditPage />}
-					></Route>
+					/>
+
+					<Route path="/*" element={<Redirect path="/" />} />
+					<Route
+						path="/player/*"
+						element={<Redirect path="/player" />}
+					/>
 				</Routes>
 			</main>
 		</Router>

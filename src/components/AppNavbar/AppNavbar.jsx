@@ -11,10 +11,10 @@ export default function AppNavbar() {
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto">
 						<Nav.Link as={Link} to="/">
-							Accueil
+							Home
 						</Nav.Link>
 						<Nav.Link as={Link} to="/player">
-							Joueur
+							Player
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
