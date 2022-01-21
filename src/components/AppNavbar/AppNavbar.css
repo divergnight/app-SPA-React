@@ -1,3 +1,7 @@
 #AppNavbar-nav-container {
 	margin-left: 10px !important;
 }
+
+.navbar {
+	border-bottom: solid 1px rgb(220, 220, 220);
+}

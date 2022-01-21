@@ -14,26 +14,19 @@ import Redirect from './Pages/Redirect/Redirect';
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
-			<header className="mb-5">
-				<AppNavbar />
-			</header>
-			<main>
-				<Routes>
-					<Route path="/" element={<HomePage />} />
-					<Route path="/player" element={<PlayerPage />} />
-					<Route path="/player/add" element={<PlayerAddPage />} />
-					<Route
-						path="/player/edit-:index"
-						element={<PlayerEditPage />}
-					/>
+			<AppNavbar />
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/player" element={<PlayerPage />} />
+				<Route path="/player/add" element={<PlayerAddPage />} />
+				<Route
+					path="/player/edit-:index"
+					element={<PlayerEditPage />}
+				/>
 
-					<Route path="/*" element={<Redirect path="/" />} />
-					<Route
-						path="/player/*"
-						element={<Redirect path="/player" />}
-					/>
-				</Routes>
-			</main>
+				<Route path="/*" element={<Redirect />} />
+				<Route path="/player/*" element={<Redirect />} />
+			</Routes>
 		</Router>
 	</React.StrictMode>,
 	document.getElementById('root')
