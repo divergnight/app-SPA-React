@@ -31,7 +31,20 @@ ReactDOM.render(
 	</React.StrictMode>,
 	document.getElementById('root')
 );
-
+/*
+<Routes>
+	<Route path="/" element={<></>}>
+		<Route path="" element={<HomePage />}></Route>
+		<Route path="*" element={<Redirect />}></Route>
+	</Route>
+	<Route path="/player/" element={<AppNavbar />}>
+		<Route path="" element={<PlayerPage />}></Route>
+		<Route path="add" element={<PlayerAddPage />}></Route>
+		<Route path="edit-:index" element={<PlayerEditPage />}></Route>
+		<Route path="*" element={<Redirect />}></Route>
+	</Route>
+</Routes>;
+*/
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
